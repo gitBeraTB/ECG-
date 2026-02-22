@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+ecg_env/
+.venv/
+venv/
+venv.bak/
+env.bak/
+
+# Data
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+*.mat
+*.dat
+*.hea
+*.atr
+
+# Vivado / Vitis HLS
+*.log
+*.jou
+*.str
+fpga/vivado_project/*.cache/
+fpga/vivado_project/*.hw/
+fpga/vivado_project/*.ip_user_files/
+fpga/vivado_project/*.runs/
+fpga/vivado_project/*.sim/
+fpga/vivado_project/*.srcs/utils_1/
+fpga/vivado_project/*.gen/
+fpga/vivado_project/.Xil/
+fpga/hls/*/
+!fpga/hls/*.cpp
+!fpga/hls/*.h
+
+# OS / IDE
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Models
+model/export/*.tflite
+model/export/*.h5
+model/export/*.weights
