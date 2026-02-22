@@ -55,5 +55,38 @@ wfdb.dl_database('mitdb', dl_dir='data/raw/mitdb')
 - **ECG Frontend**: AD8232 analog modül
 - **İletişim**: BLE (HM-10 / nRF52832)
 
+## 🚀 Eklenebilecek Özellikler
+
+### Seviye 1: Akademik Prototip
+- **Transfer Learning**: PTB-XL üzerinde pretrain edilmiş model → MIT-BIH'e fine-tune.
+- **Explainability (XAI)**: Grad-CAM ile modelin ECG'nin neresine baktığını görselleştirme.
+- **Multi-model karşılaştırma**: Aynı FPGA üzerinde 1D-CNN vs LSTM vs Random Forest benchmark'ı.
+- **Edge AI benchmark süiti**: Latency-accuracy Pareto eğrisi.
+- **Otomatik rapor oluşturucu**: Model performansını LaTeX/PDF olarak dışa aktaran script.
+
+### Seviye 2: Giyilebilir Prototip
+- **Stres seviyesi tahmini**: HRV'den LF/HF oranı → stres sınıflandırması.
+- **Uyku kalitesi analizi**: HRV trendi ile uyku fazlarını (derin/hafif/REM) tahmin etme.
+- **Hareket artefaktı reddi**: Akselerometre ile fiziksel hareket gürültüsünü filtreleme.
+- **Kablosuz OTA güncelleme**: BLE üzerinden FPGA bitstream veya model ağırlıkları güncelleme.
+- **Çoklu kullanıcı profili**: Farklı kişiler için kalibrasyon ve baseline kaydetme.
+- **Gerçek zamanlı ECG streaming**: WebSocket üzerinden canlı ECG görselleştirme.
+
+### Seviye 3: Klinik Sistem
+- **Miyokard iskemisi tespiti**: ST-segment depresyonu → erken uyarı sistemi.
+- **QT uzaması izleme**: İlaç yan etkisi takibi.
+- **Atriyal flutter tespiti**: Sawtooth patern tanıma.
+- **Pacemaker spike tespiti**: Pacemaker hastalarında doğru beat sınıflandırma.
+- **Federated Learning**: Cihazlar arası veri paylaşımı olmadan model güncelleme.
+- **Edge-Cloud hibrit mimari**: Basit tespitler FPGA'da, karmaşık analiz bulutta.
+
+### Seviye 4: Ürünleşme
+- **Aile sağlık paneli**: Aile fertlerinin kalp sağlığını merkezden izleme paneli.
+- **Acil durum SOS**: Kritik arritmi tespiti durumunda otomatik bildirim/yardım çağrısı.
+- **EHR Entegrasyonu**: HL7 FHIR standardı ile hastane sistemlerine veri gönderimi.
+- **Telemonitor modu**: Doktorun hastayı uzaktan gerçek zamanlı izlemesi.
+- **AI Chatbot entegrasyonu**: ECG verilerini doğal dil ile sorgulama.
+- **Yaşlı düşme tespiti**: Akselerometre + ECG birleşimi ile düşme tespiti.
+
 ## Lisans
 MIT License
